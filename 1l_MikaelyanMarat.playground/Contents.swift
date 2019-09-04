@@ -55,7 +55,3 @@ func calculateIncome( sum: Int, percent: Int, years: Int) {
 
 calculateIncome(sum: 10000, percent: 10, years: 5)
 calculateIncome(sum: 100000, percent: 7, years: 5)
-
-
-
-
