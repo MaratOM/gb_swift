@@ -41,7 +41,7 @@ triangeOperations(a: 3, b: 4)
 print("==============================")
 print("Расчёт процентов")
 print("------------------------------")
-func calculateIncome( sum: Int, percent: Int, years: Int) {
+func calculateIncome( sum: Int, percent: Int, years: Int = 5) {
     var yearsLeft = 1
     var resultSum = sum
 
@@ -53,5 +53,6 @@ func calculateIncome( sum: Int, percent: Int, years: Int) {
     print(resultSum)
 }
 
-calculateIncome(sum: 10000, percent: 10, years: 5)
+
+calculateIncome(sum: 10000, percent: 10)
 calculateIncome(sum: 100000, percent: 7, years: 5)
