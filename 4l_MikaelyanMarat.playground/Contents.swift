@@ -94,7 +94,6 @@ class TrunkCar: Car {
         self.bodyVolume = bodyVolume
     }
     
-    
     func act (action: TrunkCarActions) {
         switch action {
         case .startEngine:
@@ -115,7 +114,6 @@ class TrunkCar: Car {
             bodyFilledVolume -= volume <= bodyFilledVolume ? volume : bodyFilledVolume
         }
     }
-    
     
     func bodyFilledPercent () -> Double {
         return bodyFilledVolume * 100 / bodyVolume
