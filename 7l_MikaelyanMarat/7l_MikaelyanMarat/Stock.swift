@@ -1,6 +1,6 @@
 //
 //  Stock.swift
-//  6l_MikaelyanMarat
+//  7l_MikaelyanMarat
 //
 //  Created by Marat Mikaelyan on 23/09/2019.
 //  Copyright © 2019 Marat Mikaelyan. All rights reserved.
