@@ -25,6 +25,11 @@ class Snake: SKShapeNode {
         body.append(head)
         // и сделаем ее дочерним объектом.
         addChild(head)
+        
+        // категория - голова
+        self.physicsBody?.categoryBitMask = CollisionCategories.Snake
+        // пересекается с телом, яблоком и границей экрана
+        self.physicsBody?.contactTestBitMask = CollisionCategories.EdgeBody | CollisionCategories.Apple
     }
     // метод добавляет еще один сегмент тела
     func addBodyPart(){

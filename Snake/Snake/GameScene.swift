@@ -22,7 +22,7 @@ class GameScene: SKScene {
         // устанавливаем категорию взаимодействия с другими объектами
         self.physicsBody?.categoryBitMask = CollisionCategories.EdgeBody
         // устанавливаем категории, с которыми будут пересекаться края сцены
-        self.physicsBody?.collisionBitMask = CollisionCategories.Snake | CollisionCategories.SnakeHead
+        self.physicsBody?.collisionBitMask = CollisionCategories.Snake
         
         createButtons()
         createApple()
@@ -109,7 +109,7 @@ extension GameScene: SKPhysicsContactDelegate {
         // логическая сумма масок соприкоснувшихся объектов
         let bodyes = contact.bodyA.categoryBitMask | contact.bodyB.categoryBitMask
         // вычитаем из суммы голову змеи, и у нас остается маска второго объекта
-        let collisionObject = bodyes ^ CollisionCategories.SnakeHead
+        let collisionObject = bodyes ^ CollisionCategories.Snake
         // проверяем, что это за второй объект
         switch collisionObject {
         case CollisionCategories.Apple: // проверяем, что это яблоко
@@ -135,7 +135,6 @@ struct CollisionCategories{
     // Тело змеи
     static let Snake: UInt32 = 0x1 << 0
     // Голова змеи
-    static let SnakeHead: UInt32 = 0x1 << 1
     // Яблоко
     static let Apple: UInt32 = 0x1 << 2
     // Край сцены (экрана)
